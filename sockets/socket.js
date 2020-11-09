@@ -6,8 +6,4 @@ io.on('connection', (client) => {
     client.on('disconnect', () => {
         console.log('Cliente desconectedo')
     })
-    client.on('msg', ( payload ) => {
-        console.log(payload)
-        io.emit('answer', { answer: 'Received' })
-    })
 })
